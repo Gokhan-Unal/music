@@ -36,11 +36,7 @@ const musicMenu = [
 
 export default function Sidebar() {
   const { playlists } = usePlaylist();
- 
 
-  if (playlists.error) {
-    return <p>Something went wrong</p>;
-  }
 
   return (
     <Box width='100%' height='calc(100% - 100px)' bg='black' padding='5px' color='gray'>
