@@ -2,14 +2,16 @@ import { Image } from '@chakra-ui/react';
 import { Box, Flex, Text } from '@chakra-ui/layout';
 import GradientLayout from '../components/GradientLayout';
 import prisma from '../lib/prisma';
+import { useMe } from '../lib/hooks';
 
 export default function Home({ artists }) {
+  const { user } = useMe();
   return (
     <GradientLayout
       color='green'
-      title='Gökhan Ünal'
+      title={`${user?.firstName} ${user?.lastName}`}
       subtitle='Profile'
-      description='15 Playlists'
+      description={`${user.playlistsCount} public playlists`}
       image='https://i.pinimg.com/originals/db/b0/f0/dbb0f0ede2520c4320bd909b360977a0.png'
       roundImage
     >
