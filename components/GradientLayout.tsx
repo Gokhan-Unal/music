@@ -29,6 +29,7 @@ export default function GradientLayout({ color, children, image, subtitle, title
           </Text>
         </Box>
       </Flex>
+      <Box paddingY="50px">{children}</Box>
     </Box>
   );
 }
