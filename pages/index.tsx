@@ -1,3 +1,9 @@
+import GradientLayout from '../components/GradientLayout';
+
 export default function Home() {
-  return 'hi';
+  return (
+    <GradientLayout color='red' roundImage>
+      <div>Home Page</div>
+    </GradientLayout>
+  );
 }
