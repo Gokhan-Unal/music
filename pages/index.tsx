@@ -11,7 +11,7 @@ export default function Home({ artists }) {
       color='green'
       title={`${user?.firstName} ${user?.lastName}`}
       subtitle='Profile'
-      description={`${user.playlistsCount} public playlists`}
+      description={`${user?.playlistCount} public playlists`}
       image='https://i.pinimg.com/originals/db/b0/f0/dbb0f0ede2520c4320bd909b360977a0.png'
       roundImage
     >
@@ -21,8 +21,8 @@ export default function Home({ artists }) {
           <Text>only visible to you</Text>
         </Box>
         <Flex>
-          {artists.map((artist) => (
-            <Box paddingX='10px' width='20%'>
+          {artists.map((artist, i) => (
+            <Box key={i} paddingX='10px' paddingStart='0' width='20%'>
               <Box bg='gray.900' borderRadius='4px' padding='15px' width='100%'>
                 <Image src='http://placekitten.com/g/300/300' borderRadius='100%' />
                 <Box marginTop='10px'>
